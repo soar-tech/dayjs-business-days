@@ -4,7 +4,7 @@
   "description": "Day.js plugin to add support for calculating dates only accounting for Business days",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
