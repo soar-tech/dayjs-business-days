@@ -139,4 +139,12 @@ npm i
 yarn
 ```
 
+Tests can be ran with the `test` script
+```bash
+npm run test
+```
+```bash
+yarn test
+```
+
 
