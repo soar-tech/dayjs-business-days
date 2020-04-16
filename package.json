@@ -20,7 +20,7 @@
     "workingdays"
   ],
   "author": "Conor Watson",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/soar-tech/dayjs-business-days/issues"
   },
