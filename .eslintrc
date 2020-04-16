@@ -1,0 +1,19 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "prettier", "plugin:security/recommended", "plugin:import/errors", "plugin:import/warnings"],
+  "plugins": ["prettier", "security"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "no-console": "error",
+    "prettier/prettier": "error",
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": "error"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "dayjs-business-days",
+  "version": "1.0.0",
+  "description": "Day.js plugin to add support for calculating dates only accounting for Business days",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/soar-tech/dayjs-business-days.git"
+  },
+  "keywords": [
+    "day.js",
+    "business",
+    "days",
+    "working",
+    "days",
+    "businessdays",
+    "workingdays"
+  ],
+  "author": "Conor Watson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soar-tech/dayjs-business-days/issues"
+  },
+  "homepage": "https://github.com/soar-tech/dayjs-business-days#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-security": "^1.4.0",
+    "prettier": "^2.0.4"
+  }
+}
