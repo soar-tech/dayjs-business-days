@@ -6,6 +6,7 @@ This is a plugin for Day.js that allows for Date calculations to take place that
 - Calculate difference between dates in Business Days
 - Get Next/Prev Business Day
 - Get all Business Days/Weeks in a Month
+- Based off [moment-business-days](https://www.npmjs.com/package/moment-business-days)
 
 ## Current CI/CD Status
 
