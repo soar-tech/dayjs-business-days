@@ -1,0 +1,29 @@
+# OSX
+.DS_Store
+
+# IDE
+.idea
+
+# npm
+node_modules
+yarn.lock
+package-lock.json
+
+# jest
+coverage
+
+# dev
+src
+test
+types
+build
+.babelrc
+.prettierrc
+.eslintrc
+
+#doc
+CONTRIBUTING.md
+docs
+
+#other
+.github
