@@ -1,6 +1,6 @@
 {
   "name": "dayjs-business-days",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Day.js plugin to add support for calculating dates only accounting for Business days",
   "main": "index.min.js",
   "module": "index.min.js",
