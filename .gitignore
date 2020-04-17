@@ -14,4 +14,4 @@ package-lock.json
 coverage
 
 # build
-/build
+index.min.js
