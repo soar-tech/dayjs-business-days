@@ -2,9 +2,11 @@
   "name": "dayjs-business-days",
   "version": "1.0.0-development",
   "description": "Day.js plugin to add support for calculating dates only accounting for Business days",
-  "main": "src/index.js",
+  "main": "index.min.js",
+  "module": "index.min.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "build": "terser src/index.js --compress --mangle --output index.min.js"
   },
   "repository": {
     "type": "git",
