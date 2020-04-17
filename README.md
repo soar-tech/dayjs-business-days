@@ -1,4 +1,5 @@
 # dayjs-business-days
+
 This is a plugin for Day.js that allows for Date calculations to take place that only consider Business Days i.e Monday to Friday
 
 - Calculate if date is a Business Day
@@ -6,7 +7,7 @@ This is a plugin for Day.js that allows for Date calculations to take place that
 - Calculate difference between dates in Business Days
 - Get Next/Prev Business Day
 - Get all Business Days/Weeks in a Month
-- Based off [moment-business-days](https://www.npmjs.com/package/moment-business-days)
+- Based off of [moment-business-days](https://www.npmjs.com/package/moment-business-days)
 
 ## Current CI/CD Status
 
@@ -39,6 +40,7 @@ You can install via Yarn or npm
 ```bash
 yarn add dayjs-business-days
 ```
+
 ```bash
 npm install dayjs-business-days
 ```
@@ -46,73 +48,90 @@ npm install dayjs-business-days
 ## Usage Guide
 
 You will need to import the plugin and activate it via the Day.js `.extend()` function
-```javascript
-import dayjs from 'dayjs'
-import dayjsBusinessDays from 'dayjs-business-days`
 
-dayjs.extend(dayjsBusinessDays)
+```javascript
+import dayjs from 'dayjs';
+import dayjsBusinessDays from 'dayjs-business-days';
+
+dayjs.extend(dayjsBusinessDays);
 ```
 
 ### isBusinessDay() => Boolean
+
 Check if the date is a business day. Returns **true** or **false**
+
 ```javascript
 // Christmas day is a Friday
-dayjs('2020-12-25').isBusinessDay() // returns true
+dayjs('2020-12-25').isBusinessDay(); // returns true
 
 // Boxing day is a Saturday
-dayjs('2020-12-26').isBusinessDay() // returns false
+dayjs('2020-12-26').isBusinessDay(); // returns false
 ```
 
 ### businessDaysAdd(number) => Day.js Object
-* `number` {`Number`} Number of Business Days to be added
+
+- `number` {`Number`} Number of Business Days to be added
 
 Adds the `number` of Business Days to the current date. Returns the new date as a **Day.js object**
+
 ```javascript
-dayjs('2020-12-25').businessDaysAdd(3).format('DD/MM/YYYY') // returns 30/12/2020
+dayjs('2020-12-25').businessDaysAdd(3).format('DD/MM/YYYY'); // returns 30/12/2020
 ```
 
 ### businessDaysSubtract(number) => Day.js Object
-* `number` {`Number`} Number of Business Days to be subtracted
+
+- `number` {`Number`} Number of Business Days to be subtracted
 
 Subtracts the `number` of Business Days from the current date. Returns the new date as a **Day.js object**
+
 ```javascript
-dayjs('2020-12-30').businessDaysSubtract(3).format('DD/MM/YYYY') // returns 25/12/2020
+dayjs('2020-12-30').businessDaysSubtract(3).format('DD/MM/YYYY'); // returns 25/12/2020
 ```
 
 ### businessDiff(date) => Number
-* `date` {`Day.js Date`} The date to be diffed from
+
+- `date` {`Day.js Date`} The date to be diffed from
 
 Calculates the number of business days between a Day.js date and `date`. Returns the difference as a **positive or negative number**.
+
 ```javascript
-dayjs('2020-12-25').businessDiff(dayjs('2020-12-30')) // returns -5
-dayjs('2020-12-30').businessDiff(dayjs('2020-12-25')) // returns 5
+dayjs('2020-12-25').businessDiff(dayjs('2020-12-30')); // returns -5
+dayjs('2020-12-30').businessDiff(dayjs('2020-12-25')); // returns 5
 ```
 
 ### nextBusinessDay() => Day.js Object
+
 Calculates the next Business Day. Returns a **Day.js object**
+
 ```javascript
 // 25th December 2020 is a Friday. Next business day is Monday 28th December.
-dayjs('2020-12-25').nextBusinessDay().format('DD/MM/YYYY') // returns 28/12/2020
+dayjs('2020-12-25').nextBusinessDay().format('DD/MM/YYYY'); // returns 28/12/2020
 ```
 
 ### prevBusinessDay() => Day.js Object
+
 Calculates the previous Business Day. Returns a **Day.js object**
+
 ```javascript
 // 28th December 2020 is a Monday. Previous business day is Friday 25th December.
-dayjs('2020-12-28').prevBusinessDay().format('DD/MM/YYYY') // returns 25/12/2020
+dayjs('2020-12-28').prevBusinessDay().format('DD/MM/YYYY'); // returns 25/12/2020
 ```
 
 ### businessDaysInMonth() => [Day.js Object]
+
 Calculates all of the business days in a given month. Returns an array of **Day.js objects**
+
 ```javascript
-dayjs('2020-12-25').businessDaysInMonth()
+dayjs('2020-12-25').businessDaysInMonth();
 // returns equivalent of [dayjs('2020-12-01'), dayjs('2020-12-02'), ...]
 ```
 
 ### businessWeeksInMonth() => [[Day.js Object]]
+
 Calculates all of the business weeks and days in a given month. Returns an two dimensional array of **Day.js objects**
+
 ```javascript
-dayjs('2020-12-25').businessWeeksInMonth()
+dayjs('2020-12-25').businessWeeksInMonth();
 // returns equivalent of
 // [
 //   [dayjs('2020-12-01'), dayjs('2020-12-02'), ...],
@@ -131,21 +150,23 @@ git clone git@github.com/soar-tech/dayjs-business-days
 
 cd dayjs-business-days
 ```
+
 and install the dependencies with either `npm` or `yarn`
 
 ```bash
 npm i
 ```
+
 ```bash
 yarn
 ```
 
 Tests can be ran with the `test` script
+
 ```bash
 npm run test
 ```
+
 ```bash
 yarn test
 ```
-
-
