@@ -8,6 +8,7 @@
     "test": "jest --coverage",
     "build": "babel src -d build",
     "minify": "terser build/index.js --compress --mangle --output index.min.js",
+    "build:minify": "yarn build && yarn minify && rm -rf build"
   },
   "repository": {
     "type": "git",
