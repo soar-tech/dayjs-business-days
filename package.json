@@ -6,7 +6,9 @@
   "module": "index.min.js",
   "scripts": {
     "test": "jest --coverage",
-    "build": "terser src/index.js --compress --mangle --output index.min.js"
+    "build": "babel src -d build",
+    "minify": "terser build/index.js --compress --mangle --output index.min.js",
+    "build:minify": "yarn build && yarn minify && rm -rf build"
   },
   "repository": {
     "type": "git",
