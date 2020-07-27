@@ -140,6 +140,22 @@ dayjs('2020-12-25').businessWeeksInMonth();
 // ]
 ```
 
+### isHoliday() => Boolean
+
+Check if the date is a holiday. Returns **true** or **false**
+
+```javascript
+// Add holidays to plugin options
+const options = {
+  holidays: ['2020-12-25'],
+  holidayFormat: 'YYYY-MM-DD',
+};
+dayjs.extend(businessDays, options);
+
+// Christmas day is a Friday
+dayjs('2020-12-25').isHoliday(); // returns true
+```
+
 ## Local Development and Contributing
 
 We are more than happy to accept PRs for bugs, improvements or new features.
