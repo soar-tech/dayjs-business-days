@@ -1,7 +1,15 @@
-export default (option, dayjsClass) => {
+export default (option = {}, dayjsClass) => {
+  dayjsClass.prototype.isHoliday = function () {
+    if (!option.holidays) return false;
+    if (option.holidays.includes(this.format(option.holidayFormat))) return true;
+
+    return false;
+  };
+
   dayjsClass.prototype.isBusinessDay = function () {
     const workingWeekdays = [1, 2, 3, 4, 5];
 
+    if (this.isHoliday()) return false;
     if (workingWeekdays.includes(this.day())) return true;
 
     return false;
