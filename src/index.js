@@ -7,7 +7,7 @@ export default (option = {}, dayjsClass) => {
   };
 
   dayjsClass.prototype.isBusinessDay = function () {
-    const workingWeekdays = [1, 2, 3, 4, 5];
+    const workingWeekdays = option.workingWeekdays ? option.workingWeekdays : [1, 2, 3, 4, 5];
 
     if (this.isHoliday()) return false;
     if (workingWeekdays.includes(this.day())) return true;
