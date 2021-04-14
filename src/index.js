@@ -1,4 +1,24 @@
-export default (option = {}, dayjsClass) => {
+export default (option = {}, dayjsClass, dayjsFactory) => {
+  dayjsFactory.getHolidays = function () {
+    return option.holidays;
+  };
+
+  dayjsFactory.setHolidays = function (holidays) {
+    option.holidays = holidays;
+  };
+
+  dayjsFactory.setHolidayFormat = function (holidayFormat) {
+    option.holidayFormat = holidayFormat;
+  };
+
+  dayjsFactory.getWorkingWeekdays = function () {
+    return option.workingWeekdays;
+  };
+
+  dayjsFactory.setWorkingWeekdays = function (workingWeekdays) {
+    option.workingWeekdays = workingWeekdays;
+  };
+
   dayjsClass.prototype.isHoliday = function () {
     if (!option.holidays) return false;
     if (option.holidays.includes(this.format(option.holidayFormat))) return true;
@@ -7,7 +27,7 @@ export default (option = {}, dayjsClass) => {
   };
 
   dayjsClass.prototype.isBusinessDay = function () {
-    const workingWeekdays = [1, 2, 3, 4, 5];
+    const workingWeekdays = option.workingWeekdays ? option.workingWeekdays : [1, 2, 3, 4, 5];
 
     if (this.isHoliday()) return false;
     if (workingWeekdays.includes(this.day())) return true;
